@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "ee6808c42890cc0dff78ec440ef0fa72"
+name = "shipping-discount"
+handle = "shipping-discount-28"
+application_url = "https://chosen-controller-mystery-electric.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "oroa-development.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_metaobjects,write_discounts,write_metaobject_definitions,write_products"
+
+[auth]
+redirect_urls = [
+  "https://chosen-controller-mystery-electric.trycloudflare.com/auth/callback",
+  "https://chosen-controller-mystery-electric.trycloudflare.com/auth/shopify/callback",
+  "https://chosen-controller-mystery-electric.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
